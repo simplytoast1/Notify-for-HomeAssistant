@@ -1,0 +1,34 @@
+# Service definitions for Notify API integration
+# Since we use dynamic service names, we can't pre-define them here
+# Instead, this file documents the expected schema that all our services follow
+
+# Service naming: notify_api.{friendly_name} (based on integration title)
+# Example: notify_api.notify_alert_c0a85b9a
+
+# Common schema for all notify_api services:
+notify:
+  name: Send notification
+  description: Send a push notification to your device using Notify API
+  fields:
+    message:
+      name: Message
+      description: The notification message text to send
+      required: true
+      example: "Front door opened"
+      selector:
+        text:
+    title:
+      name: Title
+      description: Optional notification title
+      required: false
+      example: "Security Alert"
+      selector:
+        text:
+    data:
+      name: Additional Data
+      description: Optional data for customizing the notification (icon_url, group_type, etc.)
+      required: false
+      advanced: true
+      example: '{"icon_url": "https://example.com/icon.png", "group_type": "security"}'
+      selector:
+        object:

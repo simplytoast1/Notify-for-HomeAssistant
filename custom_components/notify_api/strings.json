@@ -1,0 +1,75 @@
+{
+  "services": {
+    "notify": {
+      "name": "Notify! Alerts",
+      "description": "Send push notifications to iOS devices via Notify API",
+      "fields": {
+        "message": {
+          "name": "Message",
+          "description": "The notification message text"
+        },
+        "title": {
+          "name": "Title",
+          "description": "Optional notification title"
+        },
+        "data": {
+          "name": "Data",
+          "description": "Optional notification data (icon_url, group_type)"
+        }
+      }
+    }
+  },
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Notify! Alerts",
+        "description": "Enter your Notify API credentials. Get your Device ID and Token from the Notify app.",
+        "data": {
+          "device_id": "Device or Group ID",
+          "token": "API Token",
+          "name": "[Optional] Friendly Name"
+        },
+        "data_description": {
+          "device_id": "Your Notify device or group identifier from the iOS app",
+          "token": "Your API authentication token from the iOS app",
+          "name": "Optional: Custom name for this integration (e.g., 'My iPhone', 'Family Group'). If not provided, defaults to 'Notify! Alert (DEVICE_ID)'"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Notify API. Please check your internet connection and try again.",
+      "invalid_auth": "Invalid Device ID or Token. Please verify your credentials in the Notify app.",
+      "unknown": "Unexpected error occurred. Please try again."
+    },
+    "abort": {
+      "already_configured": "This device/group is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Reconfigure Notify! Alerts",
+        "description": "Update your Notify API credentials and optional default values. Default values are used when automations don't specify them, allowing you to set consistent styling once and override per-automation as needed.",
+        "data": {
+          "device_id": "Device or Group ID",
+          "token": "API Token",
+          "default_title": "[Optional] Default notification title",
+          "default_icon_url": "[Optional] Default icon URL (e.g., https://notifyicons.pingie.com/icon.png)",
+          "default_group_type": "[Optional] Default group type for threading (e.g., 'alerts')"
+        },
+        "data_description": {
+          "device_id": "Your Notify device or group identifier from the iOS app",
+          "token": "Your API authentication token from the iOS app",
+          "default_title": "Optional: Title used when automations don't specify one (e.g., 'Home Assistant')",
+          "default_icon_url": "Optional: Icon URL used when automations don't specify one",
+          "default_group_type": "Optional: Group type used when automations don't specify one (e.g., 'security', 'alerts')"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Notify API. Please check your internet connection and try again.",
+      "invalid_auth": "Invalid Device ID or Token. Please verify your credentials in the Notify app.",
+      "unknown": "Unexpected error occurred. Please try again."
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "domain": "notify_api",
+  "name": "Notify! Alerts",
+  "codeowners": ["@pingie"],
+  "config_flow": true,
+  "documentation": "https://notify.pingie.com",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "requirements": ["requests>=2.31.0"],
+  "version": "1.0.0"
+}

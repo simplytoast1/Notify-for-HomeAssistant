@@ -1,0 +1,9 @@
+{
+  "name": "Notify! Alerts",
+  "description": "Get Notify Webhook Alerts direct from Home Assistant",
+  "domains": ["notify"],
+  "iot_class": "cloud_push",
+  "homeassistant": "2024.1.0",
+  "render_readme": true,
+  "logo": "https://github.com/simplytoast1/Notify-for-HomeAssistant/raw/main/icon.png"
+}
